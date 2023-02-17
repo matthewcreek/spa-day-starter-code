@@ -22,14 +22,41 @@
             <td th:text="${treatment}">sample text</td>
         </tr>
     </table>
-    <div id="manicure" th:if="${manipedi.equals('manicure')}">
+    <div id="manicure" th:if="${manipedi.equals('Manicure')}">
         <h3>Manicure</h3>
         <p th:replace="~{fragments :: manicureDescription}"></p>
     </div>
-    <div id="pedicure" th:if="${manipedi.equals('pedicure')}">
+    <div id="pedicure" th:if="${manipedi.equals('Pedicure')}">
+        <h3>Pedicure</h3>
+        <p th:replace="~{fragments :: pedicureDescription}"></p>
+    </div>
+    <div id="both" th:if="${manipedi.equals('Both')}">
+        <h3>Manicure</h3>
+        <p th:replace="~{fragments :: manicureDescription}"></p>
         <h3>Pedicure</h3>
         <p th:replace="~{fragments :: pedicureDescription}"></p>
     </div>
 </div>
 </body>
+<footer>
+    <table>
+        <tr>
+            <td>
+                <div class="polish-samples" id="red"></div>
+            </td>
+            <td>
+                <div class="polish-samples" id="green"></div>
+            </td>
+            <td>
+                <div class="polish-samples" id="orange"></div>
+            </td>
+            <td>
+                <div class="polish-samples" id="blue"></div>
+            </td>
+            <td>
+                <div class="polish-samples" id="black"></div>
+            </td>
+        </tr>
+    </table>
+</footer>
 </html>
