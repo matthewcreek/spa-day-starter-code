@@ -8,11 +8,11 @@
 <body>
     <form method="post" action="/user">
         <label>Username:
-            <input type="text" name="username">
+            <input type="text" name="username" th:value="${username}">
         </label>
         <br>
         <label>Email Address:
-            <input type="email" name="email">
+            <input type="email" name="email" th:value="${email}">
         </label>
         <br>
         <label>Password:
@@ -21,6 +21,7 @@
         <br>
         <label>Re-Enter Password:
             <input type="password" name="verify">
+            <p th:if="${error}" style="color:red">Passwords do not match!</p>
         </label>
         <br>
         <input type="submit" value="Log In" />
