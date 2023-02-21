@@ -21,7 +21,8 @@ public class UserController {
         if (verify.equals(user.getPassword())) {
             return "user/index";
         }
-        System.out.println(user.getUsername() + user.getEmail() + user.getPassword() + verify);
+        String error = "Passwords do not match!";
+        model.addAttribute(error);
         return "user/add";
     }
 }
